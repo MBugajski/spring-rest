@@ -1,5 +1,6 @@
 package com.mbugajski.spring.rest.rest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,13 @@ public class StudentRestController {
 	@GetMapping("/students")
 	public List<Student> getStudents() {
 		
-		return null;
+		List<Student> theStudents = new ArrayList<>();
+		
+		theStudents.add(new Student("Anna", "Kowalska"));
+		theStudents.add(new Student("Jan", "Nowak"));
+		theStudents.add(new Student("Jane", "Brown"));
+		theStudents.add(new Student("Mark", "Doe"));
+		
+		return theStudents;
 	}
 }
