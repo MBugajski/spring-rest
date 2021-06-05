@@ -66,7 +66,7 @@ public class StudentRestController {
 		StudentErrorResponse errorResponse = new StudentErrorResponse();
 		
 		errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
-		errorResponse.setMessage(exc.getMessage());
+		errorResponse.setMessage("Request failed.");
 		errorResponse.setTimeStamp(System.currentTimeMillis());
 		
 		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
